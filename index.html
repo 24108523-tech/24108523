@@ -1,107 +1,143 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vị Phố - Ẩm Thực Đường Phố Việt Nam</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thư Viện Ẩm Thực Việt Nam</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 30px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #b71c1c;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        #image {
+            width: 700px;
+            height: 400px;
+            border: 4px solid #b71c1c;
+            border-radius: 12px;
+            margin: 0 auto 30px auto;
+            background-color: #333;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            text-align: center;
+            font-size: 120%;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 30px;
+            box-sizing: border-box;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            transition: background-image 0.3s ease-in-out;
+            position: relative;
+        }
+
+        #image::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.45);
+            border-radius: 8px;
+            z-index: 1;
+        }
+
+        #image span {
+            position: relative;
+            z-index: 2;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .preview {
+            width: 140px;
+            height: 100px;
+            border: 3px solid #fff;
+            border-radius: 8px;
+            cursor: pointer;
+            object-fit: cover;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .preview:hover {
+            transform: translateY(-5px);
+            border-color: #b71c1c;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Skip Link cho Accessibility -->
-  <a href="#main-content" class="skip-link">Chuyển đến nội dung chính</a>
+    <h1>Ẩm Thực Truyền Thống Việt Nam</h1>
 
-  <header>
-    <div class="header-container">
-      <div class="logo-area">
-        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=150&q=80" alt="Logo Vị Phố">
-        <h1>VỊ PHỐ <span>VIỆT NAM</span></h1>
-      </div>
-      <nav aria-label="Điều hướng chính">
-        <ul>
-          <li><a href="index.html" class="active">Trang chủ</a></li>
-          <li><a href="menu.html">Thực đơn</a></li>
-          <li><a href="#contact">Liên hệ</a></li>
-        </ul>
-      </nav>
+    <div id="image">
+        <span id="text-content">Rê chuột qua hình ảnh món ăn bên dưới để xem chi tiết</span>
     </div>
-  </header>
 
-  <main id="main-content">
-    <!-- Banner Giới Thiệu -->
-    <section class="hero card">
-      <div class="hero-tag">Đặc sản Phố Cổ</div>
-      <h2>HƯƠNG VỊ ĐƯỜNG PHỐ CHÂN THẬT</h2>
-      <p>Chào mừng bạn đến với <strong>Vị Phố</strong>. Chúng tôi mang đến những món ăn đậm đà bản sắc Việt Nam với nguyên liệu tươi ngon chọn lọc mỗi ngày trong không gian đậm chất phố thị.</p>
-    </section>
+    <div class="gallery">
+        <img class="preview" 
+             alt="Phở Bò - Món ăn quốc hồn quốc túy với nước dùng đậm đà ninh từ xương" 
+             src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=800" 
+             onmouseover="upDate(this)" 
+             onmouseleave="unDo()">
 
-    <!-- Nổi Bật Trang Chủ (CSS Grid) -->
-    <section class="card">
-      <h2>MÓN ĂN BÁN CHẠY NHẤT</h2>
-      <div class="grid-container">
-        <article class="grid-card">
-          <div class="badge">Best Seller</div>
-          <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&w=600&q=80" alt="Tô phở bò truyền thống bốc khói">
-          <h3>Phở Bò Gia Truyền</h3>
-          <p>Nước dùng đậm đà ninh từ xương ống trong 12 tiếng, ăn kèm bánh phở tươi mềm và rau thơm.</p>
-        </article>
-        <article class="grid-card">
-          <div class="badge HOT">Gợi Ý</div>
-          <img src="https://images.unsplash.com/photo-1626804475297-41608e074eb1?auto=format&fit=crop&w=600&q=80" alt="Ổ bánh mì giòn kẹp thịt">
-          <h3>Bánh Mì Thập Cẩm</h3>
-          <p>Vỏ bánh giòn rụm kẹp pate nhà làm, chả lụa, dưa góp chua ngọt và rau thơm chuẩn vị street food.</p>
-        </article>
-        <article class="grid-card">
-          <div class="badge">Món Tươi</div>
-          <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&q=80" alt="Đĩa gỏi cuốn tôm thịt tươi ngon">
-          <h3>Gỏi Cuốn Tôm Thịt</h3>
-          <p>Bánh tráng cuộn tôm tươi, thịt luộc, bún và rau sống, chấm cùng tương đen béo ngậy.</p>
-        </article>
-      </div>
-    </section>
+        <img class="preview" 
+             alt="Bánh Mì - Sự kết hợp hoàn hảo giữa vỏ giòn và nhân thịt, pate, rau thơm" 
+             src="https://media-cdn-v2.laodong.vn/storage/newsportal/2024/6/7/1350134/Banh-Mi-6.jpg" 
+             onmouseover="upDate(this)" 
+             onmouseleave="unDo()">
 
-    <!-- Góc Quán Đời Thường (Flexbox) -->
-    <section class="card">
-      <h2>KHÔNG GIAN QUÁN BÌNH DỊ</h2>
-      <div class="flex-container">
-        <div class="flex-item">
-          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Bàn ăn ngoài trời không gian mở">
-          <p>Bàn ăn vỉa hè thoáng mát, đông vui</p>
-        </div>
-        <div class="flex-item">
-          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Góc bếp chế biến tươi sống">
-          <p>Bếp mở chế biến tại chỗ sạch sẽ</p>
-        </div>
-      </div>
-    </section>
+        <img class="preview" 
+             alt="Gỏi Cuốn - Món ăn thanh mát gồm tôm, thịt, bún và rau sống cuốn bánh tráng" 
+             src="https://cooponline.vn/tin-tuc/wp-content/uploads/2025/10/goi-cuon-tom-thit-chuan-vi-nuoc-cham-dau-phong-1.png" 
+             onmouseover="upDate(this)" 
+             onmouseleave="unDo()">
 
-    <!-- Thông Tin Liên Hệ -->
-    <section id="contact" class="card contact-card">
-      <h2>THÔNG TIN LIÊN HỆ & ĐẶT BÀN</h2>
-      <div class="contact-grid">
-        <div class="contact-info-item">
-          <strong>📍 Địa chỉ:</strong>
-          <span>12 Ngõ Chợ Đồng Xuân, Quận Hoàn Kiếm, Hà Nội</span>
-        </div>
-        <div class="contact-info-item">
-          <strong>⏰ Giờ phục vụ:</strong>
-          <span>06:00 - 21:30 (Tất cả các ngày trong tuần)</span>
-        </div>
-        <div class="contact-info-item">
-          <strong>📞 Hotline đặt món:</strong>
-          <span>0988 123 456</span>
-        </div>
-        <div class="contact-info-item">
-          <strong>✉️ Email:</strong>
-          <span>lienhe@viphovietnam.com</span>
-        </div>
-      </div>
-    </section>
-  </main>
+        <img class="preview" 
+             alt="Bún Chả - Thịt nướng thơm lừng ăn kèm bún, rau sống và nước mắm chua ngọt" 
+             src="https://static.vinwonders.com/production/bun-cha-cau-giay-1.jpg" 
+             onmouseover="upDate(this)" 
+             onmouseleave="unDo()">
+    </div>
 
-  <footer>
-    <p>&copy; 2026 Vị Phố Việt Nam. Bảo lưu mọi quyền.</p>
-  </footer>
+    <script>
+        function upDate(previewPic) {
+            console.log("Event triggered");
+            console.log("Alt:", previewPic.alt);
+            console.log("Src:", previewPic.src);
+
+            let imageDiv = document.getElementById("image");
+            let textSpan = document.getElementById("text-content");
+
+            textSpan.innerHTML = previewPic.alt;
+            imageDiv.style.backgroundImage = "url('" + previewPic.src + "')";
+        }
+
+        function unDo() {
+            let imageDiv = document.getElementById("image");
+            let textSpan = document.getElementById("text-content");
+
+            imageDiv.style.backgroundImage = "url('')";
+            textSpan.innerHTML = "Rê chuột qua hình ảnh món ăn bên dưới để xem chi tiết";
+        }
+    </script>
 
 </body>
 </html>
