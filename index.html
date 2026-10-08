@@ -1,40 +1,89 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ẩm Thực Việt Nam - Responsive Web</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe - Ẩm Thực Việt Nam</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>Văn Hoá Ẩm Thực Việt Nam</h1>
-    <p>Hương vị truyền thống - Tinh hoa ba miền</p>
-  </header>
+    <!-- Header / Thanh điều hướng -->
+    <header class="header">
+        <div class="logo-box">[ LOGO: AM THUC VIET ]</div>
+        <nav class="nav-menu">
+            <a href="#">[ Trang chủ ]</a>
+            <a href="#">[ Thực đơn ]</a>
+            <a href="#">[ Khuyến mãi ]</a>
+            <a href="#">[ Liên hệ ]</a>
+        </nav>
+    </header>
 
-  <main class="container">
-    <!-- Món 1: Phở -->
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=800&q=80" alt="Phở Bò Việt Nam">
-      <h2>Phở Bò Truyền Thống</h2>
-      <p>Món ăn quốc hồn quốc túy với nước dùng hầm xương trong vắt, thơm mùi thảo mộc cùng bánh phở mềm dẻo.</p>
-    </div>
+    <!-- Hero Section / Trang đích giới thiệu -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="tag">[ SPECIAL DISH ]</span>
+            <h1>[ Phở Bò Truyền Thống Hà Nội ]</h1>
+            <p>[ Hương vị nước dùng đậm đà ninh từ xương ống trong 12 tiếng, kết hợp cùng bánh phở tươi và thịt bò mềm. ]</p>
+            <button class="btn">[ Đặt món ngay ]</button>
+        </div>
+        <div class="sketch-image hero-img">
+            <!-- Chèn link ảnh Phở Bò tại đây -->
+            <img src="https://static.vinwonders.com/production/pho-bo-ha-noi-1.jpg" alt="Phở Bò Hà Nội" class="wireframe-img">
+        </div>
+    </section>
 
-    <!-- Món 2: Bánh Mì -->
-    <div class="card">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI0ZACCyTF302jvVAipe8XcUQFrkn3o37ij5T6tt09kg&s=10" alt="Bánh Mì Việt Nam">
-      <h2>Bánh Mì Sài Gòn</h2>
-      <p>Sự kết hợp hoàn hảo giữa vỏ bánh giòn rụm với pate, thịt nguội, dưa góp và các loại rau thơm đặc trưng.</p>
-    </div>
+    <!-- Featured Menu Section / Món ăn nổi bật -->
+    <section class="featured-dishes">
+        <h2>[ Món Ăn Nổi Bật Trong Ngày ]</h2>
+        <div class="dish-grid">
+            
+            <!-- Món 1: Bánh Mì -->
+            <div class="dish-card">
+                <div class="sketch-image card-img">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/banh-mi-with-grilled-pork1-1663331872.jpg?crop=0.683xw:1.00xh;0.317xw,0&resize=1200:*" alt="Bánh Mì Sài Gòn" class="wireframe-img">
+                </div>
+                <h3>[ Bánh Mì Sài Gòn ]</h3>
+                <p>[ Vỏ giòn rụm, nhân thịt nguội, pate thơm béo và rau dưa chua thanh vị. ]</p>
+                <div class="card-footer">
+                    <span class="price">[ 35.000 VNĐ ]</span>
+                    <button class="btn-sm">[ Thêm vào giỏ ]</button>
+                </div>
+            </div>
 
-    <!-- Món 3: Gỏi Cuốn -->
-    <div class="card">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2PuJGJp-eEctUX0saXmZMqj18B_YOvfzrAjnpXxCCKA&s=10" alt="Gỏi Cuốn Việt Nam">
-      <h2>Gỏi Cuốn Thanh Mát</h2>
-      <p>Món ăn tươi ngon sử dụng bánh tráng cuốn tôm, thịt, bún và rau sống, chấm cùng tương đen hoặc nước mắm chua ngọt.</p>
-    </div>
-  </main>
+            <!-- Món 2: Bún Chả -->
+            <div class="dish-card">
+                <div class="sketch-image card-img">
+                    <img src="https://images.unsplash.com/photo-1541544741938-0af808871cc0?q=80&w=600&auto=format&fit=crop" alt="Bún Chả Hà Nội" class="wireframe-img">
+                </div>
+                <h3>[ Bún Chả Hà Nội ]</h3>
+                <p>[ Chả nướng than hoa thơm lừng ăn kèm bún tươi, nước mắm chua ngọt và rau sống. ]</p>
+                <div class="card-footer">
+                    <span class="price">[ 50.000 VNĐ ]</span>
+                    <button class="btn-sm">[ Thêm vào giỏ ]</button>
+                </div>
+            </div>
+
+            <!-- Món 3: Gỏi Cuốn -->
+            <div class="dish-card">
+                <div class="sketch-image card-img">
+                    <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=600&auto=format&fit=crop" alt="Gỏi Cuốn Tôm Thịt" class="wireframe-img">
+                </div>
+                <h3>[ Gỏi Cuốn Tôm Thịt ]</h3>
+                <p>[ Cuốn tôm thịt tươi ngon, chấm cùng mắm nêm hoặc tương đậu phộng béo ngậy. ]</p>
+                <div class="card-footer">
+                    <span class="price">[ 40.000 VNĐ ]</span>
+                    <button class="btn-sm">[ Thêm vào giỏ ]</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer / Chân trang -->
+    <footer class="footer">
+        <p>© 2026 Vietnamese Food Wireframe Sketch. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
